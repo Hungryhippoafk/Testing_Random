@@ -8,14 +8,14 @@ body{
  align-items: center;
  justify-content: center;
  height: 100vh;
- background: linear-gradient(135deg, #6db3f2, #1e62d0);
+ background: linear-gradient(135deg, #6db3f2, #cbcfd5);
  color: #fff;
 }
 
 .weatherCard {
     display:flex;
-    background: rgba (255,255,255,0.9);
-    color: #333;
+    background: white;
+    color: #767474;
     padding:20px;
     border-radius: 10px;
     text-align:center;
