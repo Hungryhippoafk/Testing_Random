@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "sass": "^1.81.1"
+  },
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "basic.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hungryhippoafk/Testing_Random.git"
+  },
+  "author": "jimmy johansson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hungryhippoafk/Testing_Random/issues"
+  },
+  "homepage": "https://github.com/Hungryhippoafk/Testing_Random#readme"
+}
