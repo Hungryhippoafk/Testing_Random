@@ -3,6 +3,7 @@ function generateWeatherApp () {
 
 const body = document.body;
 const weatherCard = document.createElement("div");
+console.log("weathercard created");
 const inputText = document.createElement("input");
 const buttonSearch = document.createElement("button");
 const buttonImg = document.createElement("button");
@@ -49,17 +50,25 @@ body.appendChild(weatherCard);
 
 buttonSearch.textContent = "Search";
 
+function searchCity () {
+    buttonSearch.addEventlistener("click", () => {
+        const cityName = inputText.value.trim();
+        if(cityName) {
+            getWeather(cityName);
+        }
+    });
+};
+
 
 }
 
-
-async function getWeather (cityName) {
-    const apiKey ="9e46242b6d1eb2ff4c69d8788b9e42dd";
-    const apiUrl ="https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric;";
+async function getWeather(cityName) {
+    const apiKey = "9e46242b6d1eb2ff4c69d8788b9e42dd";
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;  // Corrected template literal
 
     try {
         const response = await fetch(apiUrl);
-        if (!response.ok) throw new Error ("City not found");
+        if (!response.ok) throw new Error("City not found");
         const data = await response.json();
 
         updateWeatherCard(data);
@@ -84,12 +93,6 @@ function updateWeatherCard(data) {
 
 }
 
-buttonSearch.textContent = "Search";
-buttonSearch.addEventlistener("click", () => {
-    const cityName = inputText.value.trim();
-    if(cityName) {
-        getWeather(cityName);
-    }
-});
+
 
 generateWeatherApp ();
